@@ -1,8 +1,12 @@
 const Footer = () => {
-  const navLinks = ['About', 'Skills', 'Projects', 'Contact'];
+  const navLinks = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
 
   const handleNavClick = (section: string) => {
-    const target = document.querySelector(`#${section.toLowerCase()}`);
+    let targetId = section.toLowerCase();
+    if (section === 'Skills') targetId = 'experience';
+    if (section === 'Experience') targetId = 'work-experience';
+    
+    const target = document.querySelector(`#${targetId}`);
     if (target) {
       const offset = 80;
       const targetPosition = (target as HTMLElement).offsetTop - offset;
@@ -22,7 +26,7 @@ const Footer = () => {
             {navLinks.map((link) => (
               <li key={link}>
                 <button
-                  onClick={() => handleNavClick(link === 'Skills' ? 'experience' : link)}
+                  onClick={() => handleNavClick(link)}
                   className="hover:text-neon-cyan transition-colors neon-underline"
                 >
                   {link}

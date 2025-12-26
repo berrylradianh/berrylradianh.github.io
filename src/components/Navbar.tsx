@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useActiveSection } from '../hooks/useActiveSection';
 
 const Navbar = () => {
@@ -35,6 +35,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: '#about', label: 'About' },
+    { href: '#work-experience', label: 'Experience' },
     { href: '#experience', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },

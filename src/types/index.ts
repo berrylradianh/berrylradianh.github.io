@@ -31,3 +31,16 @@ export interface SocialLink {
   url: string;
   icon: string;
 }
+
+export interface Experience {
+  id: number;
+  company: string;
+  position: string;
+  employmentType: string; // Full-time, Part-time, Contract, etc.
+  startDate: string;
+  endDate: string | 'Present';
+  duration: string;
+  description: string;
+  location: string;
+  workMode: 'Remote' | 'Onsite' | 'Hybrid';
+}
