@@ -97,25 +97,6 @@ const Contact = () => {
           }`}
         >
           <p className="text-gray-400 text-lg mb-6">Let's build something amazing together!</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://github.com/berrylradianh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neon-btn inline-block"
-              aria-label="View GitHub profile"
-            >
-              View GitHub
-            </a>
-            <a
-              href="/assets/cv.pdf"
-              target="_blank"
-              className="neon-btn neon-btn-purple inline-block"
-              aria-label="Download CV"
-            >
-              Download CV
-            </a>
-          </div>
         </div>
       </div>
     </section>

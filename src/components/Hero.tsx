@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden neon-border-cyan animate-float">
               <img
                 src="/assets/profile.png"
-                alt="Berryl Radian Hamesha - Backend Developer"
+                alt="Berryl Radian Hamesha - Software Engineer"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -49,7 +49,7 @@ const Hero = () => {
               <span className="neon-text-cyan">Hamesha</span>
             </h1>
             <p className="text-2xl lg:text-3xl text-gray-300 mb-8 font-semibold">
-              <span className="neon-text-purple">Backend Developer</span>
+              <span className="neon-text-purple">Software Engineer</span>
             </p>
             <p className="text-gray-400 text-base lg:text-lg mb-10 leading-relaxed max-w-xl">
               Crafting scalable APIs and backend solutions with{' '}
@@ -58,8 +58,8 @@ const Hero = () => {
               technologies.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="btn-container flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            {/* CTA Buttons & Social Links */}
+            <div className="btn-container flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-10">
               <button
                 className="neon-btn"
                 onClick={() => window.open('/assets/cv.pdf')}
@@ -67,35 +67,28 @@ const Hero = () => {
               >
                 Download CV
               </button>
-              <button
-                className="neon-btn neon-btn-purple"
-                onClick={() => window.open('/assets/portfolio.pdf')}
-                aria-label="View Portfolio"
-              >
-                Portfolio
-              </button>
-            </div>
 
-            {/* Social Links */}
-            <div id="socials-container" className="flex gap-6 justify-center lg:justify-start">
-              <a
-                href="https://www.linkedin.com/in/berryl-radian-hamesha-475936205/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300"
-                aria-label="Visit LinkedIn profile"
-              >
-                <img src="/assets/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
-              </a>
-              <a
-                href="https://github.com/berrylradianh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300"
-                aria-label="Visit GitHub profile"
-              >
-                <img src="/assets/github.png" alt="GitHub" className="w-8 h-8" />
-              </a>
+              {/* Social Links */}
+              <div id="socials-container" className="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/in/berryl-radian-hamesha-475936205/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300 bg-[#0077b5] hover:bg-[#006399]"
+                  aria-label="Visit LinkedIn profile"
+                >
+                  <img src="/assets/linkedin.png" alt="LinkedIn" className="w-8 h-8 brightness-0 invert" />
+                </a>
+                <a
+                  href="https://github.com/berrylradianh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300 bg-[#333333] hover:bg-[#24292e]"
+                  aria-label="Visit GitHub profile"
+                >
+                  <img src="/assets/github.png" alt="GitHub" className="w-8 h-8 brightness-0 invert" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
