@@ -7,7 +7,7 @@ const Contact = () => {
   const contactInfo: ContactInfo[] = [
     {
       type: 'email',
-      label: 'Email',
+      label: 'Gmail',
       value: 'berrylhamesha@gmail.com',
       url: 'mailto:berrylhamesha@gmail.com',
       icon: '/assets/email.png',
@@ -58,17 +58,15 @@ const Contact = () => {
               <div className="flex-shrink-0">
                 <div
                   className={`w-16 h-16 rounded-full ${
-                    contact.type === 'email' ? 'bg-neon-cyan/10' : 'bg-neon-purple/10'
-                  } flex items-center justify-center ${
-                    contact.type === 'email'
-                      ? 'group-hover:bg-neon-cyan/20'
-                      : 'group-hover:bg-neon-purple/20'
-                  } transition-colors`}
+                    contact.type === 'email' 
+                      ? 'bg-[#EA4335] group-hover:bg-[#d33426]' 
+                      : 'bg-[#0077b5] group-hover:bg-[#006399]'
+                  } flex items-center justify-center transition-colors`}
                 >
                   <img
                     src={contact.icon}
                     alt={contact.label}
-                    className="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="w-10 h-10 brightness-0 invert transition-opacity"
                   />
                 </div>
               </div>

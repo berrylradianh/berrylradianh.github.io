@@ -38,25 +38,25 @@ const Footer = () => {
             href="https://www.linkedin.com/in/berryl-radian-hamesha-475936205/"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300"
+            className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300 bg-[#0077b5] hover:bg-[#006399]"
             aria-label="LinkedIn profile"
           >
-            <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
+            <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 brightness-0 invert" />
           </a>
           <a
             href="https://github.com/berrylradianh"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300"
+            className="glass-card p-3 hover-glow-cyan rounded-lg transition-all duration-300 bg-[#333333] hover:bg-[#24292e]"
             aria-label="GitHub profile"
           >
-            <img src="/assets/github.png" alt="GitHub" className="w-6 h-6" />
+            <img src="/assets/github.png" alt="GitHub" className="w-6 h-6 brightness-0 invert" />
           </a>
         </div>
 
         {/* Copyright */}
         <p className="text-center text-gray-500 text-sm">
-          &copy; 2023-2025{' '}
+          &copy; 2023{' '}
           <span className="neon-text-cyan font-semibold">Berryl Radian Hamesha</span>. All Rights
           Reserved.
         </p>

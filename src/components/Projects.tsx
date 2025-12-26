@@ -7,33 +7,30 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Ecowave',
+      title: 'PINAR APP',
       description:
-        'Scalable backend API for environmental tracking and management built with Golang and PostgreSQL.',
+        'The POLINEMA Indoor Navigation with Augmented Reality system is an application based on the Android Operating System that utilizes Augmented Reality and GPS technology to show the location and route to the destination according to user instructions.',
       image: '/assets/project-1.jpg',
-      techStack: ['Golang', 'PostgreSQL', 'REST API'],
-      githubUrl: 'https://github.com/Ecowave-Alterra/ecowave-go',
-      apiDocUrl: 'https://documenter.getpostman.com/view/22559948/2s93z894c7',
+      techStack: ['Kotlin', 'SQLite', 'Augmented Reality'],
+      documentation: 'https://youtu.be/FsXdIOCXfew?si=N1q4C6EIC74Ksi2s',
     },
     {
       id: 2,
-      title: 'Victoria Jewelry',
+      title: 'Belle Indonesia',
       description:
-        'E-commerce backend system with inventory management and transaction processing capabilities.',
+        'Belle is a web app offering high-quality beauty products and detailed services to enhance natural beauty. With extensive experience, Belle prioritizes customer education and satisfaction, helping every user find exactly what they need on their beauty journey.',
       image: '/assets/project-2.jpg',
-      techStack: ['Golang', 'MySQL', 'REST API'],
-      githubUrl: 'https://github.com/Victoria-Jewelry/victoria-be',
-      apiDocUrl: 'https://documenter.getpostman.com/view/22559948/2s93z9bNUq',
+      techStack: ['Laravel', 'MySQL'],
+      documentation: 'https://www.belleindonesia.com/',
     },
     {
       id: 3,
-      title: 'Hotelifoz',
+      title: 'Desainovatif',
       description:
-        'Hotel management system API with booking, room management, and customer service features.',
+        '“DesaInovatif”is an official village government portal that provides public information and participation services, NIK-based document status checks, resident and village statistics, as well as access to budget reports and local potential data—aimed at ensuring transparency and convenience for the community.',
       image: '/assets/project-3.jpg',
-      techStack: ['Golang', 'PostgreSQL', 'REST API'],
-      githubUrl: 'https://github.com/berrylradianh/go-hotelifoz',
-      apiDocUrl: 'https://documenter.getpostman.com/view/22559948/2s93zB6Myp',
+      techStack: ['Laravel', 'MySQL'],
+      documentation: 'https://desakendi.com/',
     },
   ];
 
@@ -53,7 +50,7 @@ const Projects = () => {
           <p className="text-neon-purple text-lg font-semibold mb-3 tracking-wide uppercase">
             Browse My
           </p>
-          <h2 className="text-4xl lg:text-6xl font-bold text-gradient mb-4">API Projects</h2>
+          <h2 className="text-4xl lg:text-6xl font-bold text-gradient mb-4">Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto" />
         </div>
 
@@ -70,7 +67,7 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-60 z-10" />
                 <img
                   src={project.image}
-                  alt={`${project.title} API Project`}
+                  alt={`${project.title} Project`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -103,17 +100,10 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <button
                     className="neon-btn text-xs px-4 py-2 flex-1"
-                    onClick={() => window.location.href = project.githubUrl}
+                    onClick={() => window.location.href = project.documentation}
                     aria-label={`View ${project.title} GitHub repository`}
                   >
-                    Github
-                  </button>
-                  <button
-                    className="neon-btn neon-btn-purple text-xs px-4 py-2 flex-1"
-                    onClick={() => window.location.href = project.apiDocUrl}
-                    aria-label={`View ${project.title} API documentation`}
-                  >
-                    API Doc
+                    Documentation
                   </button>
                 </div>
               </div>

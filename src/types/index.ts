@@ -4,8 +4,7 @@ export interface Project {
   description: string;
   image: string;
   techStack: string[];
-  githubUrl: string;
-  apiDocUrl: string;
+  documentation: string;
 }
 
 export interface Skill {

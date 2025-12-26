@@ -176,7 +176,7 @@ For questions or issues:
 
 ## 📄 License
 
-© 2023-2025 Berryl Radian Hamesha. All Rights Reserved.
+© 2023 Berryl Radian Hamesha. All Rights Reserved.
 
 ---
 
