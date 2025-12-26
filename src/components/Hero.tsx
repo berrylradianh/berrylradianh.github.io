@@ -52,10 +52,10 @@ const Hero = () => {
               <span className="neon-text-purple">Software Engineer</span>
             </p>
             <p className="text-gray-400 text-base lg:text-lg mb-10 leading-relaxed max-w-xl">
-              Crafting scalable APIs and backend solutions with{' '}
-              <span className="text-neon-cyan font-semibold">Golang</span>,{' '}
-              <span className="text-neon-cyan font-semibold">Node.js</span>, and modern cloud
-              technologies.
+              Building scalable software systems, integrating{' '}
+              <span className="text-neon-purple font-semibold">AI-driven features</span> and{' '}
+              <span className="text-neon-purple font-semibold">Web3 architectures</span> for
+              high-performance applications.
             </p>
 
             {/* CTA Buttons & Social Links */}
