@@ -1,8 +1,33 @@
+import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import type { ContactInfo } from '../types';
 
 const Contact = () => {
   const { ref: contactRef, isVisible } = useScrollReveal();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate form submission
+    setFormStatus('success');
+    setTimeout(() => {
+      setFormStatus('idle');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 3000);
+  };
 
   const contactInfo: ContactInfo[] = [
     {
@@ -88,13 +113,115 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Additional CTA */}
+        {/* Contact Form */}
         <div
-          className={`text-center transition-all duration-700 delay-400 ${
+          className={`transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="text-gray-400 text-lg mb-6">Let's build something amazing together!</p>
+          <div className="glass-card p-8 lg:p-10">
+            <h3 className="text-2xl font-bold text-neon-cyan mb-6 text-center">
+              Send Me a Message
+            </h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name & Email Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-gray-300 font-medium mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/40 border border-neon-cyan/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-gray-300 font-medium mb-2">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/40 border border-neon-cyan/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+
+              {/* Subject */}
+              <div>
+                <label htmlFor="subject" className="block text-gray-300 font-medium mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-black/40 border border-neon-cyan/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                  placeholder="Project inquiry"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label htmlFor="message" className="block text-gray-300 font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-black/40 border border-neon-cyan/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              {/* Success Message */}
+              {formStatus === 'success' && (
+                <div className="text-center p-4 bg-neon-cyan/10 border border-neon-cyan/30 rounded-lg">
+                  <p className="text-neon-cyan font-semibold">
+                    ✓ Thank you! Your message has been sent successfully.
+                  </p>
+                </div>
+              )}
+            </form>
+          </div>
+        </div>
+
+        {/* Additional CTA */}
+        <div
+          className={`text-center mt-12 transition-all duration-700 delay-500 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <p className="text-gray-400 text-lg">Let's build something amazing together!</p>
         </div>
       </div>
     </section>
